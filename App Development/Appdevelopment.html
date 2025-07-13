@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Development | Dhiman Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDRKPVRmGq81wOdqnnKBFwtQBJaTVHa7KhMQ&s) no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00bfff;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00bfff;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('https://i.imgur.com/lWftlNJ.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h1,
+        .hero p,
+        .hero .cta-button {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #00bfff;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #00bfff;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0099cc;
+        }
+
+        section {
+            padding: 60px 10%;
+            background-color: #121212;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #00bfff;
+        }
+
+        .service-container,
+        .pricing-container,
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .service-box,
+        .pricing-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-box:hover,
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .service-box h3,
+        .pricing-card h3 {
+            color: #00bfff;
+            margin-bottom: 10px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .pricing-card li {
+            margin: 8px 0;
+            color: #ddd;
+        }
+
+        .pricing-card p {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00bfff;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0099cc;
+        }
+
+        .portfolio-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form textarea {
+            margin-bottom: 15px;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #1f1f1f;
+            color: #fff;
+        }
+
+        form input::placeholder,
+        form textarea::placeholder {
+            color: #bbb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0d0d0d;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">Dhiman Tech</div>
+        <nav>
+            <a href="#templates">Templates</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Custom App Templates for Your Business</h1>
+        <p>Buy premium app templates for Android & iOS – Ready to launch!</p>
+        <a href="#templates" class="cta-button">View Templates</a>
+    </section>
+
+    <section id="templates">
+        <h2>Featured App Templates</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Food Delivery App</h3>
+                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/online-food-delivery-app-design-template-55c42a8f6aa9ac13ef2d2383ee7ee20e_screen.jpg?ts=1734266431"
+                    alt="Food App" height="500" width="640">
+            </div>
+            <div class="project-card">
+                <h3>Fitness Tracker</h3>
+                <img src="https://cdn.sanity.io/images/ordgikwe/production/0864d3c8f15245dfb30e13156adefb439e9e06ac-2048x1536.png?w=2048&h=1536&auto=format"
+                    alt="Fitness App" height="480">
+            </div>
+
+            <div class="project-card">
+                <h3>Shopping App</h3>
+                <img src="https://img.freepik.com/free-vector/fashion-shopping-app-pack_23-2148654434.jpg?semt=ais_hybrid&w=740"
+                    alt="Shopping App" height="425">
+            </div>
+            <div class="project-card">
+                <h3>Chat App</h3>
+                <img src="https://t4.ftcdn.net/jpg/04/09/46/63/360_F_409466324_varuuTltk6JhhP9O7dVC97nPjhCIsROd.jpg" alt="Chat App" width="640">
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p>₹2999</p>
+                <ul>
+                    <li>Single App Template</li>
+                    <li>Basic UI Customization</li>
+                    <li>Email Support</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="pricing-card popular">
+                <h3>Pro</h3>
+                <p>₹5999</p>
+                <ul>
+                    <li>2 App Templates</li>
+                    <li>UI + Backend Setup</li>
+                    <li>WhatsApp Support</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Business</h3>
+                <p>₹9999</p>
+                <ul>
+                    <li>All App Templates</li>
+                    <li>Full Customization</li>
+                    <li>1-on-1 Developer Call</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Which app are you interested in?" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dhiman Tech. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Dhiman Tech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: url('https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 40px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-container h2 {
+            margin-bottom: 25px;
+            font-size: 28px;
+            color: #00ffe1;
+        }
+
+        .login-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #eee;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00ffe1;
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-form button:hover {
+            background-color: #00cbb0;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #00ffe1;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Dhiman Tech</h2>
+        <form class="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="/Sign in Page/Signin.html">Sign up</a></p>
+    </div>
+</body>
+
+</html>
